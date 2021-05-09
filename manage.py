@@ -4,20 +4,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/about')
 def about():
-    render_template ('about.html')
+    return render_template ('about.html')
 
 @app.route('post')
 def post():
-    render_template('post.html')
+    return render_template('post.html')
 
 @app.route('/contact')
 def contact():
-    render_template('contact.html')
+    return render_template('contact.html')
 
 
 
@@ -30,6 +30,5 @@ def contact():
 
 
 
-if __name__ == '__main__:'
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
