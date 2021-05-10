@@ -1,0 +1,25 @@
+{% extends 'base.html'%}{% import 'bootstrap/wtf.html' as wtf %} {% import 'macros.html' as macro %} {% block content%}
+<div class="header">
+    <br>
+    <br>
+    <div class="container headerContents">
+        <div class="randomQuotes">
+            <h1 class="text-center quote"><i class="fas fa-quote-left"></i><em> {{quotes.quote}} </em> <i class="fas fa-quote-right"></i></h1>
+            <h3 class="subtitle text-center">~{{quotes.author}}</h3>
+            <br>
+            <hr>
+            <div class="container welcome">
+
+                <h2 class="bold">!Subscribe to get alerts for new content!</h2>
+                <div class="subscribeForm">
+                    {{wtf.quick_form(form)}}
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
